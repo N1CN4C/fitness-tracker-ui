@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  background-color: #1A1A1A;
+  color: #E0E0E0;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4F5D53;
+  color: #FCF5E5;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+  /* --- Dropdown Menu Styles --- */
+  .main-nav ul {
+      list-style-type: none; /* Remove bullet points */
+      margin: 0;
+      padding: 0;
+      display: flex; /* Makes menu items sit next to each other */
+      justify-content: center; /* Center the menu items */
+      gap: 30px; /* Space between main menu items */
+  }
+
+  .main-nav ul li {
+      position: relative; /* Essential for positioning the dropdown content */
+      margin-bottom: 5px; /* Small margin for aesthetic separation */
+  }
+
+  .main-nav ul li a {
+      display: block; /* Make the whole link clickable area */
+      color: #FCF5E5; /* Light text color from your header */
+      text-align: center;
+      padding: 10px 15px;
+      text-decoration: none; /* Remove underline */
+      white-space: nowrap; /* Prevent text wrapping */
+      transition: background-color 0.3s ease; /* Smooth hover effect */
+      border-radius: 5px; /* Slightly rounded corners */
+  }
+
+  .main-nav ul li a:hover {
+      background-color: rgba(252, 245, 229, 0.1); /* Slight hover tint */
+  }
+
+  /* Dropdown specific styles */
+  .dropdown-content {
+      display: none; /* Hidden by default */
+      position: absolute; /* Position relative to the parent .dropdown */
+      background-color: #5D6C60; /* A slightly lighter shade of your header green, or your header green */
+      min-width: 160px; /* Minimum width for dropdown */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Subtle shadow */
+      z-index: 1; /* Ensure it appears above other content */
+      border-radius: 5px; /* Match header corners */
+      overflow: hidden; /* Ensures child elements respect border-radius */
+      left: 50%; /* Center the dropdown horizontally relative to its parent */
+      transform: translateX(-50%); /* Adjust to truly center */
+      top: 100%; /* Position just below the parent link */
+      padding-top: 5px; /* Small gap from parent */
+      padding-bottom: 5px; /* Small gap from parent */
+  }
+
+  .dropdown-content a {
+      color: #FCF5E5; /* Text color for dropdown items */
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left; /* Align dropdown items to the left */
+      transition: background-color 0.3s ease; /* Smooth hover effect for dropdown items */
+  }
+
+  .dropdown-content a:hover {
+      background-color: #6C7D70; /* Slightly darker hover for dropdown items */
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+      display: block; /* Show the dropdown when the parent li is hovered */
+  }
+
+  /* Style for the dropdown arrow */
+  .dropbtn .arrow {
+      margin-left: 8px; /* Space between text and arrow */
+      font-size: 0.7em; /* Make arrow a bit smaller */
+      vertical-align: middle; /* Align with text */
+      transition: transform 0.3s ease; /* Smooth rotation */
+  }
+
+  /* Rotate arrow on hover */
+  .dropdown:hover .dropbtn .arrow {
+      transform: rotate(180deg);
+  }
