@@ -24,9 +24,73 @@
     </nav>
   </header>
   <main>
-    <p>This is the movements page.</p>
+    <h1>Movements</h1>
+    <button id="btn-movement-add">Add Movement</button>
+    <table id="tbl-movements" class="ft-tbl">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Muscle Groups</th>
+          <th>Equipment</th>
+        </tr>
+      </thead>
+      <tbody id="tbl-body-movements">
+      </tbody>
+    </table>
   </main>
   
-  <script src="/JS/main.js"></script>
+  <div id="modal-movement-add" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add Movement</h2>
+      <form id="form-movement-add">
+        <label>
+          Name
+          <input name="name" type="text" /> 
+        </label>
+        <label>
+          Description
+          <textarea name="description"></textarea>
+        </label>
+        <label>
+          Muscle Groups
+          <input name="musclegroups" type="text" />
+        </label>
+        <label>
+          Equipment
+          <input name="equipment" type="text" />
+        </label>
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-movement-edit" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Movement</h2>
+      <form id="form-movement-edit">
+        <label>
+          Name
+          <input name="name" type="text" />
+        </label>
+        <label>
+          Description
+          <textarea name="description"></textarea>
+        </label>
+        <label>
+          Muscle Groups
+          <input name="musclegroups" type="text" />
+        </label>
+        <label>
+          Equipment
+          <input name="equipment" type="text" />
+        </label>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
 </body>
+<script src="/JS/main.js"></script>
 </html>
