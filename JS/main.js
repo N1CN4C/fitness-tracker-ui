@@ -1,21 +1,24 @@
 // ====== DOM ELEMENTS ======
-const dropdown = document.querySelector('.dropdown');
-const toggleBtn = dropdown.querySelector('.dropdown_toggle');
+const navbarDropdown = document.querySelector('.dropdown');
+const navbarDropdownToggleBtn = navbarDropdown.querySelector('.dropdown_toggle');
 
 // ====== EVENT LISTENERS ======
 
-// Header Nav
-toggleBtn.addEventListener('click', function(e) {
-  const isOpen = dropdown.classList.toggle('open');
-  toggleBtn.setAttribute('aria-expanded', isOpen);
-});
+navbarDropdownToggleBtn.addEventListener('click', openNavbarDropdown );
 
 // Close Nav menu when clicking outside
 document.addEventListener('click', function(e) {
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove('open');
-    toggleBtn.setAttribute('aria-expanded', 'false');
+  if (!navbarDropdown.contains(e.target)) {
+    closeNavbarDropdown();
   }
 });
 
 // ====== FUNCTIONS ======
+function openNavbarDropdown() {
+  const isOpen = navbarDropdown.classList.toggle('open');
+  navbarDropdownToggleBtn.setAttribute('aria-expanded', isOpen);
+}
+function closeNavbarDropdown() {
+    navbarDropdown.classList.remove('open');
+    navbarDropdownToggleBtn.setAttribute('aria-expanded', 'false');
+}
