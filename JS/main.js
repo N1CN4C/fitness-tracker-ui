@@ -1,16 +1,6 @@
-// ====== DATA ======
-let movements = [];
-
 // ====== DOM ELEMENTS ======
-
-// Header Nav
 const dropdown = document.querySelector('.dropdown');
 const toggleBtn = dropdown.querySelector('.dropdown_toggle');
-
-// Modals
-const modalMovementAdd = document.getElementById('modal-movement-add');
-const btnMovementAdd = document.getElementById('btn-movement-add');
-const btnModalMovementAddClose = modalMovementAdd.querySelector('.close');
 
 // ====== EVENT LISTENERS ======
 
@@ -28,16 +18,4 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// Modals
-btnMovementAdd.addEventListener('click', openAddMovementModal );
-btnModalMovementAddClose.addEventListener('click', closeAddMovementModal );
-
 // ====== FUNCTIONS ======
-
-// Modals
-function openAddMovementModal() {
-  modalMovementAdd.style.display = 'block';
-}
-function closeAddMovementModal() {
-  modalMovementAdd.style.display = 'none';
-}
