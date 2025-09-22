@@ -186,6 +186,9 @@ a.header-link {
 
 .modal-content button[type="submit"] {
   align-self: flex-start;
+}
+
+.btn-primary {
   padding: 0.5rem 1rem;
   background-color: #007bff;
   color: white;
@@ -194,6 +197,6 @@ a.header-link {
   cursor: pointer;
 }
 
-.modal-content button[type="submit"]:hover {
+.btn-primary:hover {
   background-color: #0056b3;
 }

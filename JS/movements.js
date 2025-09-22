@@ -40,7 +40,7 @@ function closeAddMovementModal() {
 function renderTable() {
   console.log(movements);
   const tbody = document.getElementById('tbl-body-movements');
-  tbody.innerHtml = '';
+  tbody.innerHTML = '';
   movements.forEach(mvmt => {
     const row = document.createElement('tr');
     row.innerHTML = `
